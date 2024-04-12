@@ -1,0 +1,43 @@
+{
+  "manifest_version": 3,
+  "name": "My Tools - 常用工具集合",
+  "version": "1.0.0",
+  "description": "工具插件",
+  "icons": {
+    "48": "icons/icon-128x128.png",
+    "96":"icons/icon-192x192.png"
+  },
+
+  "permissions": [
+    "tabs",
+    "contextMenus",
+    "storage",
+    "notifications",
+    "desktopCapture",
+    "scripting",
+
+    "tts",
+
+    "bookmarks",
+
+    "tabCapture",
+    "offscreen",
+
+    "activeTab",
+    "downloads",
+
+    "webRequest",
+    "declarativeNetRequest"
+  ],
+  "host_permissions": [
+    "*://*/*"
+  ],
+  "action": {
+    "default_icon":"icons/icon-192x192.png",
+    "default_popup": "popup/index.html"
+  },
+  "background": {
+    "service_worker": "service_worker.js"
+  }
+
+}

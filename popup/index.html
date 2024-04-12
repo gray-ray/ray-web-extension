@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      href="../lib/bootstrap.min.css"
+      rel="stylesheet"
+      crossorigin="anonymous"
+    />
+    <script
+      src="../lib/bootstrap.bundle.min.js"
+      crossorigin="anonymous"
+    ></script>
+    <link rel="stylesheet" href="../lib/bootstrap-icons.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.0/font/bootstrap-icons.css"
+    />
+    <link rel="stylesheet" href="./index.css" />
+    <title>我的工具</title>
+  </head>
+  <body>
+    <div class="toolWrap">
+      <!--    屏幕录制 -->
+      <button
+        class="btn btn-primary btn-sm"
+        type="button"
+        data-bs-toggle="collapse"
+        data-bs-target="#screenRecord"
+        aria-expanded="false"
+        aria-controls="screenRecord"
+        style="display: block"
+      >
+        屏幕录制
+      </button>
+
+      <div class="collapse" id="screenRecord">
+        <div class="card card-body grid3">
+          <button
+            type="button"
+            id="recordBtn"
+            class="btn btn-outline-dark btn-sm"
+          >
+            <i class="bi bi-play-btn"></i> <span id="startRecord">开始</span>
+          </button>
+
+          <button
+            type="button"
+            id="stopRecord"
+            class="btn btn-outline-dark btn-sm"
+          >
+            <i class="bi bi-stop-circle"></i> <span>停止</span>
+          </button>
+
+          <button
+            type="button"
+            id="saveRecord"
+            class="btn btn-outline-dark btn-sm"
+          >
+            <i class="bi bi-save"></i> <span>保存</span>
+          </button>
+        </div>
+      </div>
+
+      <!-- 屏幕截屏 -->
+      <button
+        type="button"
+        style="display: block; margin-top: 16px"
+        id="captureBtn"
+        class="btn btn-primary btn-sm"
+      >
+        <i class="bi bi-camera"></i> <span>截屏</span>
+      </button>
+
+      <!-- 书签 -->
+      <button
+        class="btn btn-primary btn-sm"
+        type="button"
+        data-bs-toggle="collapse"
+        data-bs-target="#bookmarks"
+        aria-expanded="false"
+        aria-controls="bookmarks"
+        style="display: block; margin-top: 16px"
+        id="bookmarksBtn"
+      >
+        书签管理
+      </button>
+
+      <div class="collapse" id="bookmarks">
+        <div class="card card-body">
+          <!-- content -->
+          <div id="listWrap"></div>
+        </div>
+      </div>
+    </div>
+
+    <!-- 朗读 -->
+    <textarea
+      style="margin-top: 16px"
+      class="form-control"
+      id="speakTextWrap"
+      aria-label="With textarea"
+    ></textarea>
+    <button type="button" id="speakBtnCn" class="btn btn-primary btn-sm">
+      <span>朗读中文</span>
+    </button>
+    <button type="button" id="speakBtnEn" class="btn btn-primary btn-sm">
+      <span>朗读英文</span>
+    </button>
+
+    <script src="./index.js"></script>
+    <script src="./record.js"></script>
+    <script src="./capture.js"></script>
+    <script src="./bookmarks.js"></script>
+    <script src="./speak.js"></script>
+  </body>
+</html>

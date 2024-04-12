@@ -1,0 +1,31 @@
+* {
+  margin: 0;
+  padding: 0;
+  font-size: 14px;
+
+}
+
+body{
+  position: relative;
+  width: 700px;
+  box-sizing: border-box;
+  padding: 16px;
+}
+
+.toolWrap{
+  width: 100%;
+ 
+}
+
+
+.grid3{
+ display: grid;
+  column-gap: 10px;
+  grid-template-columns: repeat(4, 1fr);
+}
+
+
+.bookmarkItem{
+  cursor: pointer;
+  
+}
